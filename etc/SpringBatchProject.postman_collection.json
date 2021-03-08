@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "ff0c8c72-6d8d-4916-9b8f-2d2077da94e0",
+		"name": "SpringBatchProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "single-process",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file\": \"C:\\\\Users\\\\Ewerson\\\\Documents\\\\_projects\\\\informes-cadoc-3040\\\\src\\\\main\\\\resources\\\\xml-input-file-1.xml\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/employees/single-process",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"single-process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single-process-multi-threaded",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file\": \"C:\\\\Users\\\\Ewerson\\\\Documents\\\\_projects\\\\informes-cadoc-3040\\\\src\\\\main\\\\resources\\\\xml-input-file-1.xml\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/employees/single-process-multi-threaded",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"single-process-multi-threaded"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single-process-parallel-steps",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"csvFile\": {\r\n        \"file\": \"C:\\\\Users\\\\Ewerson\\\\Documents\\\\_projects\\\\informes-cadoc-3040\\\\src\\\\main\\\\resources\\\\csv-input-file-1.csv\"\r\n    },\r\n    \"xmlFile\": {\r\n        \"file\":  \"C:\\\\Users\\\\Ewerson\\\\Documents\\\\_projects\\\\informes-cadoc-3040\\\\src\\\\main\\\\resources\\\\xml-input-file-1.xml\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/employees/single-process-parallel-steps",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"single-process-parallel-steps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partitioning-single-process",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"directory\": \"C:\\\\Users\\\\Ewerson\\\\Documents\\\\_projects\\\\informes-cadoc-3040\\\\src\\\\main\\\\resources\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/employees/partitioning-single-process",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"partitioning-single-process"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
